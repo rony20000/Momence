@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { ExchangeRatesList } from '../ExchangeRatesList';
 import { theme } from '../../styles/theme';
-import { ExchangeRate } from '../../types/currency';
+import type { ExchangeRate } from '../../types/currency';
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);

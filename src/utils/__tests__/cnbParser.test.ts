@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { parseCNBData, convertCurrency } from '../cnbParser';
-import { ExchangeRate } from '../../types/currency';
+import type { ExchangeRate } from '../../types/currency';
 
 describe('parseCNBData', () => {
   const sampleCNBData = `16 Oct 2025 #203
