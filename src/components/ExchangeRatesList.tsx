@@ -12,31 +12,32 @@ const ListHeader = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #1f2937;
+  color: ${props => props.theme.colors.text.primary};
   margin-bottom: 0.5rem;
 `;
 
 const Subtitle = styled.p`
-  font-size: 0.875rem;
-  color: #6b7280;
+  font-size: 1rem;
+  color: ${props => props.theme.colors.text.secondary};
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 `;
 
 const EmptyState = styled.div`
   text-align: center;
   padding: 3rem;
-  color: #6b7280;
+  color: ${props => props.theme.colors.text.secondary};
   font-size: 1rem;
 `;
 

@@ -4,16 +4,17 @@ import { formatRate } from '../utils/formatters';
 import { getFlagEmoji } from '../constants/flags';
 
 const Card = styled.div`
-  background: ${props => props.theme.colors.background.white};
-  border-radius: 0.75rem;
-  padding: 1.25rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease-in-out;
+  background: ${props => props.theme.colors.background.light};
+  border-radius: ${props => props.theme.borderRadius.md};
+  padding: 1.5rem;
+  box-shadow: ${props => props.theme.shadows.md};
+  transition: all ${props => props.theme.transitions.normal};
   border: 1px solid ${props => props.theme.colors.border.default};
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: ${props => props.theme.shadows.glow};
+    border-color: ${props => props.theme.colors.primary};
   }
 `;
 

@@ -21,14 +21,14 @@ const LoadingContainer = styled.div`
 const Spinner = styled.div`
   width: 48px;
   height: 48px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top-color: #ffffff;
+  border: 4px solid ${props => props.theme.colors.border.default};
+  border-top-color: ${props => props.theme.colors.primary};
   border-radius: 50%;
   animation: ${spin} 0.8s linear infinite;
 `;
 
 const LoadingText = styled.p`
-  color: #ffffff;
+  color: ${props => props.theme.colors.text.primary};
   font-size: 1rem;
   font-weight: 500;
 `;

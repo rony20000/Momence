@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
 const ErrorContainer = styled.div`
-  background-color: #fee2e2;
-  border: 1px solid #fecaca;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 2px solid ${props => props.theme.colors.error};
+  border-radius: ${props => props.theme.borderRadius.md};
+  padding: 2rem;
   margin: 2rem auto;
   max-width: 600px;
 `;
 
 const ErrorTitle = styled.h3`
-  color: #991b1b;
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  color: ${props => props.theme.colors.error};
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -24,9 +24,9 @@ const ErrorIcon = styled.span`
 `;
 
 const ErrorText = styled.p`
-  color: #7f1d1d;
-  font-size: 0.875rem;
-  line-height: 1.5;
+  color: ${props => props.theme.colors.text.primary};
+  font-size: 1rem;
+  line-height: 1.6;
 `;
 
 interface ErrorMessageProps {
